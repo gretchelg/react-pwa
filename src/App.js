@@ -11,8 +11,8 @@ function App() {
       <header>
 			{<button onClick={install}>Install App</button>}
 		</header>
-      {/* <WebcamCapture /> */}
-      <Camera />
+      <WebcamCapture />
+      {/* <Camera /> */}
     </div>
   );
 }
