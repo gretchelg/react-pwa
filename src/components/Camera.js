@@ -4,9 +4,18 @@ export default function Camera() {
 const videoRef = useRef(null);
 const [stream, setStream] = useState(null);
 
-const startCamera = async () => {
+const constraints = {
+    video: {
+        width: { ideal: 4096 },
+          height: { ideal: 2160 },
+      facingMode: {
+        ideal: "environment"
+      }
+    }
+  };
+const startCamera = async (constraints) => {
     try {
-    const mediaStream = await navigator.mediaDevices.getUserMedia({ video: true });
+    const mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
 
     if (videoRef.current) {
         videoRef.current.srcObject = mediaStream;
