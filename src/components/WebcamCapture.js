@@ -12,7 +12,7 @@ const capturePhoto = () => {
 
 return (
     <div>
-    <Webcam ref={webcamRef} />
+    <Webcam videoConstraints={{ facingMode: 'environment' }} ref={webcamRef} />
     <button onClick={capturePhoto}>Capture Photo</button>
     {capturedImage && (
         <div>
