@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-// import Camera from './components/Camera';
+import Camera from './components/Camera';
 import WebcamCapture from './components/WebcamCapture';
 import { usePWAInstall } from 'react-use-pwa-install'
 
@@ -11,8 +11,8 @@ function App() {
       <header>
 			{<button onClick={install}>Install App</button>}
 		</header>
-      <WebcamCapture />
-      {/* <Camera /> */}
+      {/* <WebcamCapture /> */}
+      <Camera />
     </div>
   );
 }
